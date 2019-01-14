@@ -23,6 +23,8 @@
     py-autopep8
     ;; VUE
     vue-mode
+    ;; OTHER
+    neotree
     ))
 
 (mapc #'(lambda (package)
@@ -52,6 +54,25 @@
 ;; enable autopep8 formatting on save
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+;; GUI stuff
+
+;; split window into 3 to get cracking
+(defun split-3-windows-horizontally-evenly ()
+  (interactive)
+  (command-execute 'split-window-horizontally)
+  (command-execute 'split-window-horizontally)
+  (command-execute 'balance-windows)
+)
+
+;; no scrollbars, thanks
+(scroll-bar-mode -1)
+
+;; bigger window on load
+(when window-system (set-frame-size (selected-frame) 200 60))
+
+;; neotree
+(global-set-key [f8] 'neotree-toggle)
 
 ;; init.el ends here
 (custom-set-variables
