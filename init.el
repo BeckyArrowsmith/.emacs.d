@@ -25,6 +25,7 @@
     ;; OTHER
     neotree
     atom-one-dark-theme
+    rainbow-delimiters
     ))
 
 (mapc #'(lambda (package)
