@@ -37,8 +37,14 @@
 ;; --------------------------------------
 
 ;;(setq inhibit-startup-message t) ;; hide the startup message
+
 (global-linum-mode t) ;; enable line numbers globally
+
 (load-theme 'atom-one-dark t) ;; load theme
+
+;; we need to be able to type M-3 to get a hash
+(fset 'insertHash "#")
+(global-set-key (kbd "M-3") 'insertHash)
 
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
