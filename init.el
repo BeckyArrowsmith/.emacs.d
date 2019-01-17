@@ -20,13 +20,16 @@
     elpy
     flycheck
     py-autopep8
+    ;; FRONTEND
+    web-mode
     ;; VUE
     vue-mode
     ;; OTHER
     neotree
     atom-one-dark-theme
     rainbow-delimiters
-    ))
+    hackernews    
+))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
