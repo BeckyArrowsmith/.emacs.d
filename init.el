@@ -25,10 +25,11 @@
     ;; VUE
     vue-mode
     ;; OTHER
-    neotree
+    auto-complete
     atom-one-dark-theme
+    hackernews
+    neotree
     rainbow-delimiters
-    hackernews    
 ))
 
 (mapc #'(lambda (package)
@@ -48,6 +49,9 @@
 ;; we need to be able to type M-3 to get a hash
 (fset 'insertHash "#")
 (global-set-key (kbd "M-3") 'insertHash)
+
+;; set font and font size
+(set-face-attribute 'default nil :height 140) ;; 14px
 
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
