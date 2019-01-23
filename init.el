@@ -84,6 +84,9 @@
     flycheck
     py-autopep8
     
+    ;; a selection of front end things
+    vue-mode
+    
     ;; git integration
     magit))
 
