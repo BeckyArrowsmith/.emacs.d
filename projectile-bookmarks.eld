@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/web/clojure-getting-started/")
