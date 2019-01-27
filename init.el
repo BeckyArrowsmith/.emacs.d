@@ -87,6 +87,10 @@
     ;; a selection of front end things
     vue-mode
     
+    ;; a selection of js things
+    js2-mode
+    flycheck
+
     ;; git integration
     magit))
 
@@ -119,6 +123,10 @@
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+;; use flycheck in js-mode
+(require 'flycheck)
+(add-hook 'js-mode-hook
+	  (lambda () (flycheck-mode t)))
 
 ;;;;
 ;; Customization
@@ -162,8 +170,7 @@
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
  '(package-selected-packages
-   (quote
-    (cider-decompile magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell))))
+   '(cider-decompile magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
